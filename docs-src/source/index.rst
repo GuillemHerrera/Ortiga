@@ -1,10 +1,10 @@
-.. Ortiga taller GIS documentation master file, created by
-   sphinx-quickstart on Thu Jan  2 18:30:36 2020.
+.. Ortiga curs GIS documentation master file, created by
+   sphinx-quickstart on Thu Jan  2 19:32:32 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Ortiga taller GIS's documentation!
-=============================================
+Welcome to Ortiga curs GIS's documentation!
+===========================================
 
 Contents:
 
