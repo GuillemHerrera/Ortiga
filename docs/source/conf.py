@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Ortiga documentation build configuration file, created by
-# sphinx-quickstart on Thu Jan  2 17:57:14 2020.
+# Ortiga taller GIS documentation build configuration file, created by
+# sphinx-quickstart on Thu Jan  2 18:30:36 2020.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -31,7 +31,6 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.todo',
     'sphinx.ext.mathjax',
 ]
 
@@ -50,9 +49,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Ortiga'
-copyright = '2020, guillemherrera'
-author = 'guillemherrera'
+project = 'Ortiga taller GIS'
+copyright = '2020, Guillem Herrera'
+author = 'Guillem Herrera'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -78,7 +77,7 @@ language = 'ca'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = []
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -105,7 +104,7 @@ pygments_style = 'sphinx'
 #keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+todo_include_todos = False
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -204,7 +203,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Ortigadoc'
+htmlhelp_basename = 'OrtigatallerGISdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -226,8 +225,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Ortiga.tex', 'Ortiga Documentation',
-     'guillemherrera', 'manual'),
+    (master_doc, 'OrtigatallerGIS.tex', 'Ortiga taller GIS Documentation',
+     'Guillem Herrera', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -256,7 +255,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ortiga', 'Ortiga Documentation',
+    (master_doc, 'ortigatallergis', 'Ortiga taller GIS Documentation',
      [author], 1)
 ]
 
@@ -270,8 +269,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Ortiga', 'Ortiga Documentation',
-     author, 'Ortiga', 'One line description of project.',
+    (master_doc, 'OrtigatallerGIS', 'Ortiga taller GIS Documentation',
+     author, 'OrtigatallerGIS', 'One line description of project.',
      'Miscellaneous'),
 ]
 
