@@ -1,0 +1,97 @@
+.. _fonaments:
+
+*********
+Fonaments
+*********
+
+Que és un GIS?
+##############
+
+S'entèn com a GIS (Geographic Information System) tota aquella tecnología relacionada 
+amb dades Georeferenciades i els seus atributs, i que ens permet realitzar anàlisis avançats sobre aquests.
+
+Ara no ens fa falta profunditzar massa en la complexitat de les dades, però si que hem de saber 
+un parell de coses importants:
+
+
+Quines dades podem treballar?
+*****************************
+
+Bàsicament es treballa amb 3 tipus de capes vectorials:
+
+* Punts 
+* Línies
+* Polígons
+
+o amb capes ràster (teselles):
+
+* WMS
+* WTS
+
+Hi han altres formats de dades que s'usan (VectorTiles, grids mesh, etc)
+
+La topología
+************
+
+Per a poder realitzar anàlisis correctament, y relacionar espaialment els diferents elements geogràfics entre ells,
+les dades que es tracten han de tenir una topología correcta.
+
+
+Els Sistemes de coordenades
+***************************
+
+
+Sistemes de Coordenades Geogràfiques
+====================================
+
+Les coordenades geogràfiques corresponen al concepte de la **latitud** i la **longitud**,
+i determinen la posició d'un punt de la superfície terrestre.
+Les línies de referència són l'equador terrestre i un meridià inicial (el de Greenwich per conveni).
+
+Per exemple: 
+
+* **Cal Temerari -> 2.08311,41.47464 (WGS 84)**
+
+La posició dels elements sobre la Terra és mesura en angles (graus)
+
+.. image:: _static/img/wgs84.png
+	:width: 400px
+	:align: center
+	:height: 400px
+
+----
+
+Aquest SC és vàlid per a la totalitat de la superfície de la Terra, i s'usa per als sistemes GPS.
+Hi ha també SC vàlids només per a entorns locals
+
+Però, com  mesurem les distàncies entre els elements, o les arèes que ens interessen?
+Amb un SCGeogràfic es pot fer, però és complex.
+
+Per sort hi han solucions, tot i que no són perfectes...
+
+
+.. image:: _static/img/projecctions.png
+	:align: center
+	:height: 350px
+	:target: https://www.youtube.com/watch?time_continue=2&v=kIID5FDi2JQ&feature=emb_logo
+
+
+Sistemes de Coordenades Projectades
+===================================
+
+.. note: Nosatres usarem sempre, a Catalunya, EPSG:25831
+
+Els sistemes de coordenades projectats venen especificats per una referència EPSG.
+
+Per a nosaltres, que usarem coordenades UTM 31N i ETRS89,
+de moment només ens interesa conèixer el nostre amic **EPSG25831**
+
+.. image:: _static/img/UTMCat.png
+	:width: 200px
+	:align: center
+	:height: 200px
+
+Ara: 
+
+* **Cal Temerari -> 423443.815,4591854.415 (EPSG 25831)**
+

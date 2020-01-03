@@ -6,17 +6,33 @@
 Welcome to Ortiga curs GIS's documentation!
 ===========================================
 
-Contents:
+
+Aquest manual conté la informació referent al curs de GIs impartit per a l'Ortiga
 
 .. toctree::
    :maxdepth: 2
+   :caption: Introducció:
+   
 
+   intro
+   fonaments
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contenidos:
+
+   MapesBase
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Metodologia:
+   
+   MapesBase
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 

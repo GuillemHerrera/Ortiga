@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fonaments &mdash; Ortiga curs GIS 1 documentació</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Ortiga curs GIS 1 documentació" href="index.html"/>
+        <link rel="next" title="Mapes base" href="MapesBase.html"/>
+        <link rel="prev" title="Introducció" href="intro.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ortiga curs GIS
+          
+
+          
+            
+            <img src="_static/favicon.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introducció:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introducció</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Fonaments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-un-gis">Que és un GIS?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quines-dades-podem-treballar">Quines dades podem treballar?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-topologia">La topología</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#els-sistemes-de-coordenades">Els Sistemes de coordenades</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sistemes-de-coordenades-geografiques">Sistemes de Coordenades Geogràfiques</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sistemes-de-coordenades-projectades">Sistemes de Coordenades Projectades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MapesBase.html">Mapes base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Metodologia:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MapesBase.html">Mapes base</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Ortiga curs GIS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Fonaments</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/fonaments.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fonaments">
+<span id="id1"></span><h1>Fonaments<a class="headerlink" href="#fonaments" title="Link permanent a aquest títol">¶</a></h1>
+<div class="section" id="que-es-un-gis">
+<h2>Que és un GIS?<a class="headerlink" href="#que-es-un-gis" title="Link permanent a aquest títol">¶</a></h2>
+<p>S&#8217;entèn com a GIS (Geographic Information System) tota aquella tecnología relacionada
+amb dades Georeferenciades i els seus atributs, i que ens permet realitzar anàlisis avançats sobre aquests.</p>
+<p>Ara no ens fa falta profunditzar massa en la complexitat de les dades, però si que hem de saber
+un parell de coses importants:</p>
+<div class="section" id="quines-dades-podem-treballar">
+<h3>Quines dades podem treballar?<a class="headerlink" href="#quines-dades-podem-treballar" title="Link permanent a aquest títol">¶</a></h3>
+<p>Bàsicament es treballa amb 3 tipus de capes vectorials:</p>
+<ul class="simple">
+<li>Punts</li>
+<li>Línies</li>
+<li>Polígons</li>
+</ul>
+<p>o amb capes ràster (teselles):</p>
+<ul class="simple">
+<li>WMS</li>
+<li>WTS</li>
+</ul>
+<p>Hi han altres formats de dades que s&#8217;usan (VectorTiles, grids mesh, etc)</p>
+</div>
+<div class="section" id="la-topologia">
+<h3>La topología<a class="headerlink" href="#la-topologia" title="Link permanent a aquest títol">¶</a></h3>
+<p>Per a poder realitzar anàlisis correctament, y relacionar espaialment els diferents elements geogràfics entre ells,
+les dades que es tracten han de tenir una topología correcta.</p>
+</div>
+<div class="section" id="els-sistemes-de-coordenades">
+<h3>Els Sistemes de coordenades<a class="headerlink" href="#els-sistemes-de-coordenades" title="Link permanent a aquest títol">¶</a></h3>
+<div class="section" id="sistemes-de-coordenades-geografiques">
+<h4>Sistemes de Coordenades Geogràfiques<a class="headerlink" href="#sistemes-de-coordenades-geografiques" title="Link permanent a aquest títol">¶</a></h4>
+<p>Les coordenades geogràfiques corresponen al concepte de la <strong>latitud</strong> i la <strong>longitud</strong>,
+i determinen la posició d&#8217;un punt de la superfície terrestre.
+Les línies de referència són l&#8217;equador terrestre i un meridià inicial (el de Greenwich per conveni).</p>
+<p>Per exemple:</p>
+<ul class="simple">
+<li><strong>Cal Temerari -&gt; 2.08311,41.47464 (WGS 84)</strong></li>
+</ul>
+<p>La posició dels elements sobre la Terra és mesura en angles (graus)</p>
+<a class="reference internal image-reference" href="_images/wgs84.png"><img alt="_images/wgs84.png" class="align-center" src="_images/wgs84.png" style="width: 400px; height: 400px;" /></a>
+<hr class="docutils" />
+<p>Aquest SC és vàlid per a la totalitat de la superfície de la Terra, i s&#8217;usa per als sistemes GPS.
+Hi ha també SC vàlids només per a entorns locals</p>
+<p>Però, com  mesurem les distàncies entre els elements, o les arèes que ens interessen?
+Amb un SCGeogràfic es pot fer, però és complex.</p>
+<p>Per sort hi han solucions, tot i que no són perfectes...</p>
+<a class="reference external image-reference" href="https://www.youtube.com/watch?time_continue=2&amp;v=kIID5FDi2JQ&amp;feature=emb_logo"><img alt="_images/projecctions.png" class="align-center" src="_images/projecctions.png" style="height: 350px;" /></a>
+</div>
+<div class="section" id="sistemes-de-coordenades-projectades">
+<h4>Sistemes de Coordenades Projectades<a class="headerlink" href="#sistemes-de-coordenades-projectades" title="Link permanent a aquest títol">¶</a></h4>
+<p>Els sistemes de coordenades projectats venen especificats per una referència EPSG.</p>
+<p>Per a nosaltres, que usarem coordenades UTM 31N i ETRS89,
+de moment només ens interesa conèixer el nostre amic <strong>EPSG25831</strong></p>
+<a class="reference internal image-reference" href="_images/UTMCat.png"><img alt="_images/UTMCat.png" class="align-center" src="_images/UTMCat.png" style="width: 200px; height: 200px;" /></a>
+<p>Ara:</p>
+<ul class="simple">
+<li><strong>Cal Temerari -&gt; 423443.815,4591854.415 (EPSG 25831)</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MapesBase.html" class="btn btn-neutral float-right" title="Mapes base" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral" title="Introducció" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Guillem Herrera.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
