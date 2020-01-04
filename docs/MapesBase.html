@@ -33,7 +33,8 @@
 
   
     <link rel="top" title="Ortiga curs GIS 1 documentació" href="index.html"/>
-        <link rel="prev" title="Fonaments" href="fonaments.html"/> 
+        <link rel="next" title="Gestió dels Sistemes de Coordenades" href="SistemesCoordenades.html"/>
+        <link rel="prev" title="Projecte QGIS" href="qgis_project.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -89,20 +90,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introducció</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fonaments.html">Fonaments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_project.html">Projecte QGIS</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contenidos:</span></p>
+<p class="caption"><span class="caption-text">Com fer els nostres mapes:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Mapes base</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#com-afegir-mapes-base-a-qgis">Com afegir mapes base a QGIS</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption"><span class="caption-text">Metodologia:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Mapes base</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#com-afegir-mapes-base-a-qgis">Com afegir mapes base a QGIS</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="SistemesCoordenades.html">Gestió dels Sistemes de Coordenades</a></li>
 </ul>
 
             
@@ -151,6 +147,51 @@
 <span id="mapesbase"></span><h1>Mapes base<a class="headerlink" href="#mapes-base" title="Link permanent a aquest títol">¶</a></h1>
 <div class="section" id="com-afegir-mapes-base-a-qgis">
 <h2>Com afegir mapes base a QGIS<a class="headerlink" href="#com-afegir-mapes-base-a-qgis" title="Link permanent a aquest títol">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Qgis treballa per capes (layers) igual que Photoshop.</p>
+</div>
+<p>Primer de tot hem de configurar una nova font de dades pel projecte. Pels mapes que volem generar,
+en general <strong>l&#8217;Institut Cartogràfic i Geològic de Catalunya (ICGC)</strong> serà una font excel·lent de dades.</p>
+<p>Tant si volem posar Ortofotos o Topogràfics de base del nostre projecte, he de conèixer primer d&#8217;on descarregar
+les tesel·les d&#8217;imatges que ens interessen.</p>
+<p>Possibles fonts:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.icgc.cat/Administracio-i-empresa/Serveis/Geoinformacio-en-linia-Geoserveis/WMS-i-tessel-les-Cartografia-de-referencia/WMS-Mapes-i-ortofotos-vigents">ICGC</a></li>
+<li><a class="reference external" href="http://www.idee.es/ca_ES/directorio-de-servicios?p_p_id=DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J_tipoServicio=WMS&amp;_DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J_supertipo=OGC&amp;_DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J_tipoAmbito=ESTATAL&amp;_DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J_descSrv=VISUALIZACION">IDEE</a></li>
+</ul>
+<ol class="arabic simple">
+<li>Cliquem l&#8217;icona del Gestor de Origens de Dades</li>
+</ol>
+<img alt="_images/DSM_tip.png" class="align-center" src="_images/DSM_tip.png" />
+<ol class="arabic simple" start="2">
+<li>Escollim el servei WMS i creeem una nova conexió</li>
+</ol>
+<a class="reference internal image-reference" href="_images/DataSourceManager.png"><img alt="_images/DataSourceManager.png" class="align-center" src="_images/DataSourceManager.png" style="width: 700px; height: 500px;" /></a>
+<ol class="arabic" start="3">
+<li><p class="first">Configurem la URL del servei escollit</p>
+<blockquote>
+<div><p>Per exemple: <code class="docutils literal"><span class="pre">http://geoserveis.icgc.cat/icc_mapesbase/wms/service?</span></code></p>
+</div></blockquote>
+</li>
+</ol>
+<a class="reference internal image-reference" href="_images/WMS_connection.png"><img alt="_images/WMS_connection.png" class="align-center" src="_images/WMS_connection.png" style="width: 350px; height: 530px;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Aquest procés només farà falta fer-lo un cop per a cada ordinador.
+El recurs WMS quedarà emmagatzemat i serà accessible per a tots els nous projectes que fem</p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Conectem, seleccionem el recurs que volguem, i l&#8217;afegim al llenç (canvas)</li>
+</ol>
+<a class="reference internal image-reference" href="_images/WMS_connection_2.png"><img alt="_images/WMS_connection_2.png" class="align-center" src="_images/WMS_connection_2.png" style="width: 700px; height: 500px;" /></a>
+<hr class="docutils" />
+<p>Ara ja podem veure la nostra base per el mapa.</p>
+<img alt="_images/VisioGeneral.png" class="align-center" src="_images/VisioGeneral.png" />
+<div class="admonition warning">
+<p class="first admonition-title">Avís</p>
+<p class="last">Fixeu-vos en el nostre amic! Estem en coordenades projectades?</p>
+</div>
 </div>
 </div>
 
@@ -161,8 +202,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="SistemesCoordenades.html" class="btn btn-neutral float-right" title="Gestió dels Sistemes de Coordenades" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="fonaments.html" class="btn btn-neutral" title="Fonaments" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="qgis_project.html" class="btn btn-neutral" title="Projecte QGIS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

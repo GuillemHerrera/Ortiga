@@ -40,12 +40,6 @@ Nosaltres accedirem a imatges Ortofotogràfiques o Topogràfiques a travès de s
 
 Hi han altres formats de dades en el món del GIS (VectorTiles, grids mesh, etc)
 
-La topología
-************
-
-Per a poder realitzar anàlisis correctament, y relacionar espaialment els diferents elements geogràfics entre ells,
-les dades que es tracten han de tenir una topología correcta.
-
 
 Els Sistemes de coordenades
 ***************************
@@ -79,6 +73,8 @@ Amb un SCGeogràfic es pot fer, però és complex.
 
 Per sort hi han solucions, tot i que no són perfectes...
 
+Sistemes de Coordenades Projectades
+===================================
 
 .. image:: _static/img/projecctions.png
 	:align: center
@@ -86,10 +82,11 @@ Per sort hi han solucions, tot i que no són perfectes...
 	:target: https://www.youtube.com/watch?time_continue=2&v=kIID5FDi2JQ&feature=emb_logo
 
 
-Sistemes de Coordenades Projectades
-===================================
+La superfície d'una esfera no pot ser representada en un pla, sense que hi hagi algún tipus de deformació
+
 
 .. note:: Nosatres usarem sempre, a Catalunya, **EPSG:25831**
+
 
 Els sistemes de coordenades projectats venen especificats per una referència EPSG.
 
@@ -106,4 +103,3 @@ Ara:
 * **Cal Temerari -> 423443.815,4591854.415 (EPSG 25831)**
 
 Ara si que ja podem mesurar les distancies en metres, i les àrees en metres quadrats!
-

@@ -10,24 +10,19 @@ Welcome to Ortiga curs GIS's documentation!
 Aquest manual conté la informació referent al curs de GIs impartit per a l'Ortiga
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Introducció:
    
-
    intro
    fonaments
+   qgis_project
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenidos:
+   :caption: Com fer els nostres mapes:
 
    MapesBase
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Metodologia:
-   
-   MapesBase
+   SistemesCoordenades
 
 
 Indices and tables

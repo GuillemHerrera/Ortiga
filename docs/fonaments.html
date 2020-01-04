@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Ortiga curs GIS 1 documentació" href="index.html"/>
-        <link rel="next" title="Mapes base" href="MapesBase.html"/>
+        <link rel="next" title="Projecte QGIS" href="qgis_project.html"/>
         <link rel="prev" title="Introducció" href="intro.html"/> 
 
   
@@ -92,7 +92,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Fonaments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#que-es-un-gis">Que és un GIS?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#quines-dades-podem-treballar">Quines dades podem treballar?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#la-topologia">La topología</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#els-sistemes-de-coordenades">Els Sistemes de coordenades</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sistemes-de-coordenades-geografiques">Sistemes de Coordenades Geogràfiques</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sistemes-de-coordenades-projectades">Sistemes de Coordenades Projectades</a></li>
@@ -102,14 +101,12 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_project.html">Projecte QGIS</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contenidos:</span></p>
+<p class="caption"><span class="caption-text">Com fer els nostres mapes:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="MapesBase.html">Mapes base</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Metodologia:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="MapesBase.html">Mapes base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SistemesCoordenades.html">Gestió dels Sistemes de Coordenades</a></li>
 </ul>
 
             
@@ -176,11 +173,6 @@ un parell de coses importants:</p>
 <p>Nosaltres accedirem a imatges Ortofotogràfiques o Topogràfiques a travès de serveis WMS</p>
 <p>Hi han altres formats de dades en el món del GIS (VectorTiles, grids mesh, etc)</p>
 </div>
-<div class="section" id="la-topologia">
-<h3>La topología<a class="headerlink" href="#la-topologia" title="Link permanent a aquest títol">¶</a></h3>
-<p>Per a poder realitzar anàlisis correctament, y relacionar espaialment els diferents elements geogràfics entre ells,
-les dades que es tracten han de tenir una topología correcta.</p>
-</div>
 <div class="section" id="els-sistemes-de-coordenades">
 <h3>Els Sistemes de coordenades<a class="headerlink" href="#els-sistemes-de-coordenades" title="Link permanent a aquest títol">¶</a></h3>
 <div class="section" id="sistemes-de-coordenades-geografiques">
@@ -200,10 +192,11 @@ Hi ha també SC vàlids només per a entorns locals</p>
 <p>Però, com  mesurem les distàncies entre els elements, o les arèes que ens interessen?
 Amb un SCGeogràfic es pot fer, però és complex.</p>
 <p>Per sort hi han solucions, tot i que no són perfectes...</p>
-<a class="reference external image-reference" href="https://www.youtube.com/watch?time_continue=2&amp;v=kIID5FDi2JQ&amp;feature=emb_logo"><img alt="_images/projecctions.png" class="align-center" src="_images/projecctions.png" style="height: 350px;" /></a>
 </div>
 <div class="section" id="sistemes-de-coordenades-projectades">
 <h4>Sistemes de Coordenades Projectades<a class="headerlink" href="#sistemes-de-coordenades-projectades" title="Link permanent a aquest títol">¶</a></h4>
+<a class="reference external image-reference" href="https://www.youtube.com/watch?time_continue=2&amp;v=kIID5FDi2JQ&amp;feature=emb_logo"><img alt="_images/projecctions.png" class="align-center" src="_images/projecctions.png" style="height: 350px;" /></a>
+<p>La superfície d&#8217;una esfera no pot ser representada en un pla, sense que hi hagi algún tipus de deformació</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
 <p class="last">Nosatres usarem sempre, a Catalunya, <strong>EPSG:25831</strong></p>
@@ -229,7 +222,7 @@ de moment només ens interesa conèixer el nostre amic <strong>EPSG25831</strong
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="MapesBase.html" class="btn btn-neutral float-right" title="Mapes base" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="qgis_project.html" class="btn btn-neutral float-right" title="Projecte QGIS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="intro.html" class="btn btn-neutral" title="Introducció" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
