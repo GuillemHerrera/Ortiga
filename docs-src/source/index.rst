@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Ortiga curs GIS's documentation!
-===========================================
+Ortiga curs GIS
+===============
 
 
 Aquest manual conté la informació referent al curs de GIs impartit per a l'Ortiga
@@ -23,6 +23,7 @@ Aquest manual conté la informació referent al curs de GIs impartit per a l'Ort
 
    MapesBase
    SistemesCoordenades
+   AfegirCapes
 
 
 Indices and tables

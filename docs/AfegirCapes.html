@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Cerca &mdash; Ortiga curs GIS 1 documentació</title>
+  <title>Les nostres capes geogràfiques &mdash; Ortiga curs GIS 1 documentació</title>
   
 
   
@@ -32,7 +32,8 @@
   
 
   
-    <link rel="top" title="Ortiga curs GIS 1 documentació" href="index.html"/> 
+    <link rel="top" title="Ortiga curs GIS 1 documentació" href="index.html"/>
+        <link rel="prev" title="Gestió dels Sistemes de Coordenades" href="SistemesCoordenades.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -70,7 +71,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -91,10 +92,17 @@
 <li class="toctree-l1"><a class="reference internal" href="qgis_project.html">Projecte QGIS</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Com fer els nostres mapes:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="MapesBase.html">Mapes base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SistemesCoordenades.html">Gestió dels Sistemes de Coordenades</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AfegirCapes.html">Les nostres capes geogràfiques</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Les nostres capes geogràfiques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#base-de-dades-geopackage">Base de dades GeoPackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#com-creeem-una-capa">Com creeem una capa?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quins-camps-necessitem">Quins camps necessitem?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -117,7 +125,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -125,8 +133,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li></li>
+    <li>Les nostres capes geogràfiques</li>
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/AfegirCapes.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -135,23 +147,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="les-nostres-capes-geografiques">
+<span id="afegircapes"></span><h1>Les nostres capes geogràfiques<a class="headerlink" href="#les-nostres-capes-geografiques" title="Link permanent a aquest títol">¶</a></h1>
+<div class="section" id="base-de-dades-geopackage">
+<h2>Base de dades GeoPackage<a class="headerlink" href="#base-de-dades-geopackage" title="Link permanent a aquest títol">¶</a></h2>
+<p>Per tal de mantenir les nostres capes geogràfiques en una forma compacte farem servir
+el format <a class="reference external" href="https://www.geopackage.org/">GeoPackage</a></p>
+<a class="reference internal image-reference" href="_images/geopkg.png"><img alt="_images/geopkg.png" class="align-center" src="_images/geopkg.png" style="width: 150px;" /></a>
+<p>Es una petita Base de Dades portàtil, que integra la capacitat de emmagatzemar dades geoespaials.</p>
+<p>Aquest format ens permet guradar varies capes geogràfiques (o només alfanumèriques) en un sol arxiu.
+No importa si tenen sistemes de coordenades diferents, o si sòn vectorials o ràsters.</p>
+<p>D&#8217;aquesta manera podrem compartir les nostres capes espaials sense problemes entre ordinadors i sòcies.</p>
+<p>Està basada en el format SQlite, en el que es basen també tots els SmartPhones moderns.</p>
+</div>
+<div class="section" id="com-creeem-una-capa">
+<h2>Com creeem una capa?<a class="headerlink" href="#com-creeem-una-capa" title="Link permanent a aquest títol">¶</a></h2>
+<p>Facil!!</p>
+<p><strong>Pestanya &#8220;Capa&#8221; -&gt; &#8220;Crear Capa&#8221; -&gt; &#8220;Nova capa GeoPackage&#8221;</strong></p>
+<img alt="_images/NewGeoPackageLayer.png" class="align-center" src="_images/NewGeoPackageLayer.png" />
+<p>I se&#8217;ns obre el següent panell:</p>
+<img alt="_images/NewGeoPackageLayer_Panel.png" class="align-center" src="_images/NewGeoPackageLayer_Panel.png" />
+<div class="section" id="quins-camps-necessitem">
+<h3>Quins camps necessitem?<a class="headerlink" href="#quins-camps-necessitem" title="Link permanent a aquest títol">¶</a></h3>
+<p>La gran pregunta!</p>
+<p>Aquest és el moment on ens hem de para a pensar que necessitem per a aquest projecte, tenint en compte que ara vivim en
+el fantàstic món del GIS!</p>
+<p>Que necessitem saber de les nostres capes geogràfiques?</p>
+<ul class="simple">
+<li>Que estàn representant?</li>
+<li>Quin tipus de geometria necessitem?</li>
+<li>Quin atributs geomètrics tenen?</li>
+<li>Quins atributs No geometrics volem emmagatzemar?</li>
+</ul>
+<img alt="_images/NewGeoPackageLayer_Edited.png" class="align-center" src="_images/NewGeoPackageLayer_Edited.png" />
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="SistemesCoordenades.html" class="btn btn-neutral" title="Gestió dels Sistemes de Coordenades" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -191,7 +234,6 @@
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -207,14 +249,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
