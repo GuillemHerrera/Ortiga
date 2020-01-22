@@ -6,7 +6,8 @@ Gestió dels Sistemes de Coordenades
 
 QGis per defecte assigna el CRS EPSG:4326 als nous projectes que s'inicien.
 
-Així doncs hem assignar-li el nostre amic 25831 al nou projecte per poder fer els caculs correctes en les geometries que afegirem més endavant.
+Així doncs hem assignar-li el nostre amic 25831 al nou projecte per poder fer els càlculs correctes
+en les geometries que afegirem més endavant.
 
 Tenim tres maneres de fer-ho:
 

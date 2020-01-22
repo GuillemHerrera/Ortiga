@@ -99,6 +99,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#base-de-dades-geopackage">Base de dades GeoPackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#com-creeem-una-capa">Com creeem una capa?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#quins-camps-necessitem">Quins camps necessitem?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tipus-de-camps">Tipus de camps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduir-dades">Introduïr dades</a></li>
 </ul>
 </li>
 </ul>
@@ -149,6 +151,9 @@
             
   <div class="section" id="les-nostres-capes-geografiques">
 <span id="afegircapes"></span><h1>Les nostres capes geogràfiques<a class="headerlink" href="#les-nostres-capes-geografiques" title="Link permanent a aquest títol">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="section" id="base-de-dades-geopackage">
 <h2>Base de dades GeoPackage<a class="headerlink" href="#base-de-dades-geopackage" title="Link permanent a aquest títol">¶</a></h2>
 <p>Per tal de mantenir les nostres capes geogràfiques en una forma compacte farem servir
@@ -159,19 +164,37 @@ el format <a class="reference external" href="https://www.geopackage.org/">GeoPa
 No importa si tenen sistemes de coordenades diferents, o si sòn vectorials o ràsters.</p>
 <p>D&#8217;aquesta manera podrem compartir les nostres capes espaials sense problemes entre ordinadors i sòcies.</p>
 <p>Està basada en el format SQlite, en el que es basen també tots els SmartPhones moderns.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="com-creeem-una-capa">
 <h2>Com creeem una capa?<a class="headerlink" href="#com-creeem-una-capa" title="Link permanent a aquest títol">¶</a></h2>
 <p>Facil!!</p>
 <p><strong>Pestanya &#8220;Capa&#8221; -&gt; &#8220;Crear Capa&#8221; -&gt; &#8220;Nova capa GeoPackage&#8221;</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <img alt="_images/NewGeoPackageLayer.png" class="align-center" src="_images/NewGeoPackageLayer.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>I se&#8217;ns obre el següent panell:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <img alt="_images/NewGeoPackageLayer_Panel.png" class="align-center" src="_images/NewGeoPackageLayer_Panel.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="section" id="quins-camps-necessitem">
 <h3>Quins camps necessitem?<a class="headerlink" href="#quins-camps-necessitem" title="Link permanent a aquest títol">¶</a></h3>
 <p>La gran pregunta!</p>
-<p>Aquest és el moment on ens hem de para a pensar que necessitem per a aquest projecte, tenint en compte que ara vivim en
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Aquest és el moment on ens hem de para a pensar que necessitem per a aquest projecte, tenint en compte que ara vivim en
 el fantàstic món del GIS!</p>
+</div>
 <p>Que necessitem saber de les nostres capes geogràfiques?</p>
 <ul class="simple">
 <li>Que estàn representant?</li>
@@ -179,8 +202,88 @@ el fantàstic món del GIS!</p>
 <li>Quin atributs geomètrics tenen?</li>
 <li>Quins atributs No geometrics volem emmagatzemar?</li>
 </ul>
-<img alt="_images/NewGeoPackageLayer_Edited.png" class="align-center" src="_images/NewGeoPackageLayer_Edited.png" />
+<p>Dels atributs geomètrics no ens n&#8217;haurem de preocupar gaire, QGis farà tota la feina per nosaltres,
+sempre qel nostre amic <strong>25831</strong> estigui content.</p>
+<p>La clau està en els atributs no geomètrics (alfanumerics). Per definir una capa que representi els diferents bancals/camps de cultiu,
+un esquelet molt senzill podria ser aquest:</p>
+<dl class="docutils">
+<dt>Capa:</dt>
+<dd><ul class="first last simple">
+<li>zona_cultiu</li>
+</ul>
+</dd>
+<dt>Camps:</dt>
+<dd><ul class="first last simple">
+<li>Tipus (Elevat, Tradicional,...)</li>
+<li>Familia (Brasicàcies, Enciams, Lleguminoses)</li>
+<li>Desherbat (Manual, Biciaixada, Motocultor)</li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
+<p>Evidentment cada projecte tindrà les seves partiularitats. Serà molt diferent un projecte per a generar un mapa
+per a un concurs, o un projecte de gestió interna dels horts.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Avís</p>
+<p class="last">Els apòstrofs són molt nostres, ho sé. Però per favor, <strong>no els utilitzeu mai</strong>
+per definir camps, o en els valors registrats, només porten problemes</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">De la mateixa manera procurem no tenir carpetes a l&#8217;ordinador que continguin espais al seu nom</p>
+</div>
+<p>Per a aquest primer exemple:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/NewGeoPackageLayer_Edited.png" class="align-center" src="_images/NewGeoPackageLayer_Edited.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="tipus-de-camps">
+<h3>Tipus de camps<a class="headerlink" href="#tipus-de-camps" title="Link permanent a aquest títol">¶</a></h3>
+<p>A l&#8217;hora de definir un camp, hem de concretar bé quin tipus de dada contindrà. Bàsicament:</p>
+<ul class="simple">
+<li>Text (String)</li>
+<li>Nombres enters (Int)</li>
+<li>Decimals (Float)</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Simplement tenir-ho en compte.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Avís</p>
+<p class="last">No podrem barrejar formats (per exemple text amb decimals), així com canviar el tipus de camp
+un cop ja estigui definit</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Un cop definida la capa, ja la tindrem accesible al lateral esquerra de QGis</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/TOC_Layer.png" class="align-center" src="_images/TOC_Layer.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="introduir-dades">
+<h3>Introduïr dades<a class="headerlink" href="#introduir-dades" title="Link permanent a aquest títol">¶</a></h3>
+<p>Primer de tot caldrà habilitar l&#8217;edició de la capa.</p>
+<p>Clickem al botó del panell, o boto dret al panell de selecció de capes.</p>
+<img alt="_images/Edit.png" class="align-center" src="_images/Edit.png" />
+<p>Observem com ara se&#8217;ns activen altres funcionalitats:</p>
+<img alt="_images/Edit_2.png" class="align-center" src="_images/Edit_2.png" />
+<p>Si clickem al botó d&#8217;afegir elements, ja serem capaces de generar, en aquest cas, polígons</p>
+<video controls src="_static/videos/Add_Poligons.mp4"></video></div>
 </div>
 </div>
 
