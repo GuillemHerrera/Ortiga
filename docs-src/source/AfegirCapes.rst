@@ -147,7 +147,7 @@ Observem com ara se'ns activen altres funcionalitats:
 
 Si clickem al botó d'afegir elements, ja serem capaces de generar, en aquest cas, polígons
 
-.. raw:: html
+Un cop definim el poligon podrem entrar ja les preuades dades alfanumèriques
 
-   <video controls src="_static/videos/Add_Poligons.mp4"></video>
-
+.. image:: _static/qgis-img/AddAtributes.png
+	:align: center
